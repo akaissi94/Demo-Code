@@ -1,0 +1,20 @@
+.category-main {
+  height: 170px;
+  width: 380px;
+  border: 1px solid #979797;
+  margin-left: 45px;
+  margin-bottom: 70px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.category-image {
+  transform: translate(100px, 40px);
+}
+
+.category-title {
+  float: left;
+  font-size: 40px;
+  font-weight: bold;
+  transform: translate(100px, -31px);
+}

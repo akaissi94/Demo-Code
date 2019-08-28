@@ -1,0 +1,92 @@
+.login_form-main {
+  padding-bottom: 130px;
+}
+
+.login_form-container {
+  position: relative;
+  padding: 0px 40px;
+  margin: auto;
+  margin-top: 95px;
+  height: 620px;
+  width: 45%;
+  border: 1px solid #979797;
+}
+
+.login_form-container_upper {
+  padding-bottom: 30px;
+}
+
+.login_form-title {
+  padding: 35px 0px;
+  font-size: 50px;
+  color: #348498;
+  font-weight: bold;
+}
+
+.login_form-sub_title {
+  font-size: 26px;
+}
+
+.login_form-input {
+  width: calc(100% - 20px);
+  height: 50px;
+  padding: 0px 10px;
+  margin: 15px 0px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.login_form-actions {
+  padding-top: 5px;
+  height: 55px;
+}
+
+.login_form-link {
+  color: #4173c3;
+  font-size: 22px;
+}
+
+.login_form-submit_button {
+  float: left;
+  background-color: #ff502f;
+  height: 55px;
+  width: 175px;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 55px;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.login_form-forgot_password {
+  margin-top: 11px;
+  padding-left: 10px;
+}
+
+.login_form-alternative {
+  margin: auto;
+  width: 104px;
+  margin-top: 30px;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.login_form-social_media {
+  padding-left: 35px;
+}
+
+.login_form-footer {
+  padding: 0px 40px;
+  width: calc(100% - 80px);
+  position: absolute;
+  padding-top: 6px;
+  border-top: 1px solid #b1b1b1;
+  font-size: 22px;
+  transform: translate(40px, 0px);
+}
+
+.login_form-sign_up {
+  padding-right: 8px;
+}

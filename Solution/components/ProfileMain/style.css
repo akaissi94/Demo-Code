@@ -1,0 +1,134 @@
+.profile_main-main {
+  padding-top: 75px;
+  padding-bottom: 35px;
+  position: relative;
+  border-bottom: 1px solid #bebebe;
+}
+
+.profile_main-user_logo_container {
+  position: relative;
+  width: 225px;
+  height: 225px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 35px;
+}
+
+.profile_main-user_logo {
+  width: 100%;
+  height: auto;
+}
+
+.profile_main-user_full_name {
+  font-size: 40px;
+  top: 75px;
+  right: 320px;
+  position: absolute;
+  width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile_main-date {
+  font-size: 25px;
+  color: #9d9d9d;
+  top: 120px;
+  right: 320px;
+  position: absolute;
+}
+
+.profile_main-edit_profile_button {
+  background-color: #ff502f;
+  height: 55px;
+  width: 210px;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 55px;
+  cursor: pointer;
+  font-size: 26px;
+  border: none;
+  top: 172px;
+  right: 320px;
+  position: absolute;
+}
+
+.profile_main-sub_titles {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.profile_main-sub_title {
+  font-size: 28px;
+  color: #4a4a4a;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.profile_main-active {
+  padding-bottom: 5px;
+  border-bottom: 5px solid #4a4a4a;
+}
+
+.profile_main-sub_title_margin {
+  margin-left: 50px;
+}
+
+.profile_main-see_more_button {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 160px;
+  color: #4173c3;
+  height: 80px;
+  width: 185px;
+  border: 1px solid #4173c3;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 80px;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.profile_main-my_reservations_navigation {
+  font-size: 22px;
+  color: #4a4a4a;
+  height: 50px;
+  border-bottom: 1px solid #979797;
+}
+
+.profile_main-filter_name {
+  float: right;
+  margin-left: 15px;
+  margin-right: 25px;
+}
+
+.profile_main-filter_value {
+  float: right;
+  cursor: pointer;
+}
+
+.profile_main-filter_value_text {
+  margin-left: 60px;
+}
+
+.profile_main-search {
+  float: left;
+  margin-left: 65px;
+}
+
+.profile_main-search_input {
+  font-size: 20px;
+  border: 1px solid #979797;
+  border-radius: 12px;
+  height: 40px;
+  width: 105px;
+  transform: translate(0px, -13px);
+  padding-right: 20px;
+  padding-left: 45px;
+}
+
+.profile_main-search_icon {
+  transform: translate(35px, -8px);
+}

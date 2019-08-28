@@ -1,0 +1,107 @@
+.reserved_book-main {
+  height: 165px;
+  border-top: 1px solid #cbcbcb;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 25px;
+}
+
+.reserved_book-image {
+  float: right;
+}
+
+.reserved_book-general_info {
+  margin-top: 25px;
+  margin-right: 25px;
+  float: right;
+}
+
+.reserved_book-title {
+  font-size: 30px;
+}
+
+.reserved_book-sub_title {
+  color: #9b9b9b;
+  font-size: 22px;
+}
+
+.reserved_book-publisher {
+  margin-right: 20px;
+}
+
+.reserved_book-state {
+  color: #9b9b9b;
+  font-size: 22px;
+  margin-top: 25px;
+}
+
+.reserved_book-state_inner {
+  margin-right: 20px;
+}
+
+.reserved_book-state_inner_green {
+  color: #20b718;
+  margin-right: 25px;
+}
+
+.reserved_book-state_inner_orange {
+  color: #f4b650;
+  margin-right: 25px;
+}
+
+.reserved_book-state_inner_red {
+  color: #eb3c2e;
+  margin-right: 25px;
+}
+
+.reserved_book-left {
+  float: left;
+  margin-left: 65px;
+  margin-top: 25px;
+}
+
+.reserved_book-left_col1 {
+  margin-left: 20px;
+  float: right;
+}
+
+.reserved_book-dates_name {
+  font-size: 22px;
+  color: #b0b0b0;
+}
+
+.reserved_book-cancel_reservation_button {
+  margin-top: 25px;
+  color: #4173c3;
+  height: 28px;
+  width: 128px;
+  border: 1px solid #4173c3;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.reserved_book-left_col2 {
+  float: right;
+}
+
+.reserved_book-dates_value {
+  font-size: 22px;
+  color: #6b6b6b;
+  direction: ltr;
+}
+
+.reserved_book-repeat_reservation_button {
+  margin-top: 25px;
+  background-color: #4173c3;
+  color: white;
+  height: 28px;
+  width: 128px;
+  border: 1px solid #4173c3;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+}

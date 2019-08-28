@@ -1,0 +1,12 @@
+.footer-main {
+  background-color: #004d61;
+  color: white;
+  height: 75px;
+}
+
+.footer-text {
+  width: 106px;
+  margin: auto;
+  font-size: 22px;
+  padding-top: 25px;
+}

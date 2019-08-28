@@ -1,0 +1,68 @@
+.browse_books-title {
+  margin: auto;
+  width: 514px;
+  margin-top: 100px;
+}
+
+.browse_books-main_title {
+  margin: auto;
+  font-size: 70px;
+  color: #004d61;
+  padding-bottom: 50px;
+  font-weight: bold;
+  width: 274px;
+}
+
+.browse_books-sub_titles {
+  text-align: center;
+}
+
+.browse_books-sub_title {
+  font-size: 40px;
+  color: #4e4e4e;
+  cursor: pointer;
+}
+
+.browse_books-sub_title_margin {
+  margin-left: 145px;
+}
+
+.browse_books-sub_title_compact {
+  margin-left: 50px !important;
+}
+
+.browse_books-active {
+  padding-bottom: 5px;
+  border-bottom: 5px solid #4e4e4e;
+}
+
+.browse_books-see_more_button {
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 80px;
+  color: #ff502f;
+  height: 40px;
+  width: 155px;
+  border: 1px solid #ff502f;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.browse_books-books {
+  width: 96%;
+  margin: auto;
+  margin-top: 35px;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
