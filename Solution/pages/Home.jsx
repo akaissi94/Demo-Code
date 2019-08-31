@@ -14,7 +14,6 @@ class Home extends React.Component {
     this.state = {};
   }
   render() {
-    console.log("hi");
     let userInfo = localStorage.getItem("userInfo");
     if (userInfo) {
       userInfo = JSON.parse(userInfo);
