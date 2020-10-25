@@ -1,6 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import "./style.css";
+import { setUserInfo } from "../../store/actions/login";
 
 class MainMenu extends React.Component {
   constructor(props) {
@@ -12,13 +14,13 @@ class MainMenu extends React.Component {
       isNewsCategoriesOpen: false,
       isBookCategoriesOpenCompacted: false,
       isNewsCategoriesOpenCompacted: false,
-      expandedSearch: false
+      expandedSearch: false,
     };
   }
   toggleMenu() {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen,
-      expandedSearch: false
+      expandedSearch: false,
     });
   }
   render() {
@@ -31,7 +33,7 @@ class MainMenu extends React.Component {
           <div
             className="main_menu-sign_out"
             onClick={() => {
-              localStorage.removeItem("userInfo");
+              this.props.setUserInfo(null);
               this.props.history.push("/");
             }}
           >
@@ -109,7 +111,7 @@ class MainMenu extends React.Component {
               if (this.props.shouldSearchExpand) {
                 this.setState({
                   expandedSearch: !this.state.expandedSearch,
-                  isMenuOpen: false
+                  isMenuOpen: false,
                 });
               }
             }}
@@ -128,12 +130,12 @@ class MainMenu extends React.Component {
                     } else if (tab == "فئات الكتب") {
                       this.setState({
                         isBookCategoriesOpen: !this.state.isBookCategoriesOpen,
-                        isNewsCategoriesOpen: false
+                        isNewsCategoriesOpen: false,
                       });
                     } else if (tab == "الأخبار") {
                       this.setState({
                         isNewsCategoriesOpen: !this.state.isNewsCategoriesOpen,
-                        isBookCategoriesOpen: false
+                        isBookCategoriesOpen: false,
                       });
                     }
                   }}
@@ -200,12 +202,12 @@ class MainMenu extends React.Component {
                       } else if (tab == "فئات الكتب") {
                         this.setState({
                           isBookCategoriesOpenCompacted: !this.state
-                            .isBookCategoriesOpenCompacted
+                            .isBookCategoriesOpenCompacted,
                         });
                       } else if (tab == "الأخبار") {
                         this.setState({
                           isNewsCategoriesOpenCompacted: !this.state
-                            .isNewsCategoriesOpenCompacted
+                            .isNewsCategoriesOpenCompacted,
                         });
                       }
                     }}
@@ -286,4 +288,8 @@ class MainMenu extends React.Component {
   }
 }
 
-export default withRouter(MainMenu);
+const mapDispatchToProps = (dispatch) => ({
+  setUserInfo: (userInfo) => dispatch(setUserInfo(userInfo)),
+});
+
+export default connect(null, mapDispatchToProps)(withRouter(MainMenu));

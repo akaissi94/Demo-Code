@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import Header from "../components/Header";
 import MainMenu from "../components/MainMenu";
 import SearchArea from "../components/SearchArea";
@@ -14,10 +15,7 @@ class Home extends React.Component {
     this.state = {};
   }
   render() {
-    let userInfo = localStorage.getItem("userInfo");
-    if (userInfo) {
-      userInfo = JSON.parse(userInfo);
-    }
+    let userInfo = this.props.userInfo;
     return (
       <div>
         <Header />
@@ -34,4 +32,8 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+const mapStateToProps = (state) => ({
+  userInfo: state.loginReducer.userInfo,
+});
+
+export default connect(mapStateToProps, null)(Home);

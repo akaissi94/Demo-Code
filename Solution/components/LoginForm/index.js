@@ -1,6 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./style.css";
 import { withRouter } from "react-router-dom";
+import { setUserInfo } from "../../store/actions/login";
 
 class LoginForm extends React.Component {
   render() {
@@ -17,12 +19,9 @@ class LoginForm extends React.Component {
               <div
                 className="login_form-submit_button"
                 onClick={() => {
-                  localStorage.setItem(
-                    "userInfo",
-                    JSON.stringify({
-                      username: "Abdulrahman El Kaissi"
-                    })
-                  );
+                  this.props.setUserInfo({
+                    username: "Abdulrahman El Kaissi",
+                  });
                   this.props.history.push("/");
                   window.scrollTo(0, 0);
                 }}
@@ -71,4 +70,8 @@ class LoginForm extends React.Component {
   }
 }
 
-export default withRouter(LoginForm);
+const mapDispatchToProps = (dispatch) => ({
+  setUserInfo: (userInfo) => dispatch(setUserInfo(userInfo)),
+});
+
+export default connect(null, mapDispatchToProps)(withRouter(LoginForm));

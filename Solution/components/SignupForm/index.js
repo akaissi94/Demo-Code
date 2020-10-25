@@ -1,8 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 import "./style.css";
 import { withRouter } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { setUserInfo } from "../../store/actions/login";
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -11,13 +13,13 @@ class SignupForm extends React.Component {
       step: 1,
       startDate: new Date(),
       degreeCount: [""],
-      bookCategories: ["الفلسفة", "الكيمياء", "الفيزياء", "الديانات"]
+      bookCategories: ["الفلسفة", "الكيمياء", "الفيزياء", "الديانات"],
     };
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(date) {
     this.setState({
-      startDate: date
+      startDate: date,
     });
   }
   render() {
@@ -62,7 +64,7 @@ class SignupForm extends React.Component {
                   type="submit"
                   value="التالي"
                   className="signup_form-next_button"
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo(0, 0);
                     this.setState({ step: 2 });
@@ -71,7 +73,7 @@ class SignupForm extends React.Component {
               </div>
             </form>
             <form className={`${step != 2 ? " signup_form-hide_step" : ""}`}>
-              {degreeCount.map(index => {
+              {degreeCount.map((index) => {
                 return (
                   <div key={index} className="signup_form-block">
                     <div className="signup_form-sub_title">إسم الشهادة</div>
@@ -97,7 +99,7 @@ class SignupForm extends React.Component {
                   let newDegreeCount = degreeCount;
                   newDegreeCount.push("");
                   this.setState({
-                    degreeCount: newDegreeCount
+                    degreeCount: newDegreeCount,
                   });
                 }}
               >
@@ -123,7 +125,7 @@ class SignupForm extends React.Component {
                   type="submit"
                   value="التالي"
                   className="signup_form-next_button"
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     window.scrollTo(0, 0);
                     this.setState({ step: 3 });
@@ -165,14 +167,11 @@ class SignupForm extends React.Component {
                   type="submit"
                   value="تقديم"
                   className="signup_form-submit_button"
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
-                    localStorage.setItem(
-                      "userInfo",
-                      JSON.stringify({
-                        username: "Abdulrahman El Kaissi"
-                      })
-                    );
+                    this.props.setUserInfo({
+                      username: "Abdulrahman El Kaissi",
+                    });
                     window.scrollTo(0, 0);
                     this.props.history.push("/");
                   }}
@@ -186,4 +185,8 @@ class SignupForm extends React.Component {
   }
 }
 
-export default withRouter(SignupForm);
+const mapDispatchToProps = (dispatch) => ({
+  setUserInfo: (userInfo) => dispatch(setUserInfo(userInfo)),
+});
+
+export default connect(null, mapDispatchToProps)(withRouter(SignupForm));
